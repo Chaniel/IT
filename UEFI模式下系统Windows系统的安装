@@ -1,0 +1,17 @@
+u盘启动工具制作
+http://www.uqidong.com/uefi.html
+
+
+制作GHO
+
+给电脑分区
+  diskgenius 分区建立ESP分区和MSR分区
+  建立若干主分区.(因为是GPT分区，所以不会限制主分区个数）
+  
+然后还原GHO文件，from image
+
+然后修复EFI引导
+启动成功
+
+
+
