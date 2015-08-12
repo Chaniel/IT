@@ -2,6 +2,17 @@ MBR 2T 4主分区
 GUID  
 
 
+
+与支持最大卷为 2 TB (terabytes) 并且每个磁盘最多有 4 个主分区（或 3 个主分区，1 个扩展分区和无限制的逻辑驱动器）
+的主启动记录 (MBR) 磁盘分区的样式相比，
+
+GUID 分区表 (GPT) 磁盘分区样式支持最大卷为 18 EB (exabytes) 并且每磁盘最多有 128 个分区。
+与 MBR 分区的磁盘不同，至关重要的平台操作数据位于分区，而不是位于非分区或隐藏扇区。
+
+另外，GPT 分区磁盘有多余的主要及备份分区表来提高分区数据结构的完整性。 
+
+
+
 MBR分区为常用分区模式
 GUID分区不常用,为新分区模式,现今预装WIN8默认为GUID分区,
 各有好处,及缺陷,下有文介绍
@@ -11,5 +22,5 @@ GUID分区不常用,为新分区模式,现今预装WIN8默认为GUID分区,
 
 
 
-GUID分区表简介
-http://www.diskgenius.cn/function/guid.php
+GUID分区表简介  http://www.diskgenius.cn/function/guid.php
+什么是GPT(GUID分区表)磁盘  http://arthur.blog.51cto.com/199026/290647
