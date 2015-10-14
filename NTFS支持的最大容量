@@ -1,0 +1,9 @@
+超过2TB的磁盘必须使用GPT分区表格式，如果想用它作为系统盘，还需要主板支持UEFI。
+初始化GPT磁盘的步骤：
+1，以Admin身份运行diskpart
+2，选择磁盘（select disk x，x为目标磁盘ID，可用list disk查看）
+3，如果已经建立了MBR分区表，用clean命令清除相应分区表信息（用clean override可强制清除，类似于水果系统的抹除磁盘功能）
+4，输入gpt命令创建GPT分区表，这时会自动创建MSR分区
+5，如果需要作为系统盘使用，需要创建EFI system分区（create partition efi）创建GPT磁盘之后，
+不再支持扩展分区和逻辑分区，同时主分区也不再限于4个。
+另外，作业系统的引导程序统一存储于EFI分区内，由主板UEFI系统自动从中调用引导，因此GPT磁盘也不再有活动分区的概念。
